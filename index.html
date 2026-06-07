@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
         <script src="https://cdn.tailwindcss.com"></script>
@@ -17,33 +17,33 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
         <style>
             :root {
-                --accent: #6366f1;
-                --accent2: #06b6d4;
-                --accent3: #f59e0b;
-                --accent4: #10b981;
-                --bg: #ffffff;
-                --bg2: #f8fafc;
-                --bg3: #f1f5f9;
-                --border: #e2e8f0;
-                --text: #0f172a;
-                --text2: #475569;
-                --text3: #94a3b8;
+                --accent: #0d9488;
+                --accent2: #d97706;
+                --accent3: #e11d48;
+                --accent4: #059669;
+                --bg: #fefdfb;
+                --bg2: #faf8f5;
+                --bg3: #f3f0eb;
+                --border: #e8e2d9;
+                --text: #1c1917;
+                --text2: #57534e;
+                --text3: #a8a29e;
                 --card: #ffffff;
                 --shadow:
-                    0 1px 3px rgba(0, 0, 0, 0.08),
-                    0 4px 16px rgba(0, 0, 0, 0.06);
+                    0 1px 3px rgba(28, 25, 23, 0.06),
+                    0 4px 16px rgba(28, 25, 23, 0.04);
             }
             .dark {
-                --bg: #0a0a0f;
-                --bg2: #111118;
-                --bg3: #1a1a24;
-                --border: #1e1e2e;
-                --text: #f1f5f9;
-                --text2: #94a3b8;
-                --text3: #475569;
-                --card: #13131c;
+                --bg: #0B0B1A;
+                --bg2: #14142B;
+                --bg3: #1F1F3D;
+                --border: #2D2D50;
+                --text: #F0F0FF;
+                --text2: #C4C4E1;
+                --text3: #8D8DAA;
+                --card: #101021;
                 --shadow:
-                    0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3);
+                    0 1px 3px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.35);
             }
             * {
                 box-sizing: border-box;
@@ -51,7 +51,7 @@
                 padding: 0;
             }
             html {
-                font-family: "Outfit", sans-serif;
+                font-family: "Inter", sans-serif;
                 background: var(--bg);
                 color: var(--text);
                 transition:
@@ -62,10 +62,10 @@
                 overflow-x: hidden;
             }
             .font-mono {
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
             }
             .font-serif {
-                font-family: "DM Serif Display", serif;
+                font-family: "Playfair Display", serif;
             }
 
             /* Cards */
@@ -128,7 +128,7 @@
                 padding: 5rem 1.5rem;
             }
             .section-label {
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.7rem;
                 letter-spacing: 0.2em;
                 text-transform: uppercase;
@@ -137,7 +137,7 @@
                 opacity: 0;
             }
             .section-title {
-                font-family: "DM Serif Display", serif;
+                font-family: "Playfair Display", serif;
                 font-size: clamp(2rem, 4vw, 3.2rem);
                 line-height: 1.15;
                 color: var(--text);
@@ -156,10 +156,10 @@
             .analogy-box {
                 background: linear-gradient(
                     135deg,
-                    rgba(99, 102, 241, 0.07),
-                    rgba(6, 182, 212, 0.05)
+                    rgba(13, 148, 136, 0.07),
+                    rgba(217, 119, 6, 0.05)
                 );
-                border: 1px solid rgba(99, 102, 241, 0.2);
+                border: 1px solid rgba(13, 148, 136, 0.2);
                 border-radius: 12px;
                 padding: 1.25rem 1.5rem;
                 margin-bottom: 1.5rem;
@@ -167,7 +167,7 @@
                 transform: translateY(12px);
             }
             .analogy-label {
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.68rem;
                 letter-spacing: 0.15em;
                 color: var(--accent);
@@ -188,7 +188,7 @@
                 padding: 0.5rem 0.9rem;
                 border-radius: 8px;
                 margin: 0.3rem;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.85rem;
                 font-weight: 500;
                 opacity: 0;
@@ -200,7 +200,7 @@
             }
             .token-chip:hover {
                 transform: translateY(-2px) scale(1.04);
-                box-shadow: 0 8px 24px rgba(99, 102, 241, 0.2);
+                box-shadow: 0 8px 24px rgba(13, 148, 136, 0.2);
             }
             .token-id {
                 font-size: 0.6rem;
@@ -219,7 +219,7 @@
                 display: flex;
                 align-items: center;
                 gap: 8px;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.65rem;
                 color: var(--text3);
             }
@@ -257,7 +257,7 @@
                 border-radius: 4px;
                 white-space: nowrap;
                 pointer-events: none;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 z-index: 10;
             }
 
@@ -269,7 +269,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.55rem;
                 color: var(--text2);
                 border: 1px solid var(--border);
@@ -303,7 +303,7 @@
                 border: 3px solid var(--bg);
                 box-shadow:
                     0 0 0 2px var(--accent),
-                    0 4px 12px rgba(99, 102, 241, 0.3);
+                    0 4px 12px rgba(13, 148, 136, 0.3);
                 cursor: pointer;
                 transition: transform 0.2s;
             }
@@ -411,7 +411,7 @@
                 gap: 0.3rem;
                 padding: 0.25rem 0.7rem;
                 border-radius: 9999px;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.7rem;
                 font-weight: 500;
             }
@@ -471,7 +471,7 @@
                 z-index: 1;
             }
             .hero-title {
-                font-family: "DM Serif Display", serif;
+                font-family: "Playfair Display", serif;
                 font-size: clamp(2.8rem, 6vw, 5rem);
                 line-height: 1.1;
                 margin-bottom: 1rem;
@@ -491,7 +491,7 @@
                 border: 1.5px solid var(--border);
                 background: var(--card);
                 color: var(--text);
-                font-family: "Outfit", sans-serif;
+                font-family: "Inter", sans-serif;
                 font-size: 0.9rem;
                 cursor: pointer;
                 transition: all 0.25s;
@@ -500,10 +500,10 @@
             .q-btn:hover,
             .q-btn.active {
                 border-color: var(--accent);
-                background: rgba(99, 102, 241, 0.07);
+                background: rgba(13, 148, 136, 0.07);
                 color: var(--accent);
                 transform: translateY(-1px);
-                box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
+                box-shadow: 0 4px 16px rgba(13, 148, 136, 0.15);
             }
 
             /* Step connector */
@@ -518,12 +518,12 @@
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
-                background: rgba(99, 102, 241, 0.1);
-                border: 1.5px solid rgba(99, 102, 241, 0.3);
+                background: rgba(13, 148, 136, 0.1);
+                border: 1.5px solid rgba(13, 148, 136, 0.3);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.75rem;
                 font-weight: 600;
                 color: var(--accent);
@@ -538,7 +538,7 @@
                 margin: 0.3rem 0;
             }
             .prob-label {
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.8rem;
                 color: var(--text);
                 width: 80px;
@@ -562,7 +562,7 @@
                 padding-left: 8px;
             }
             .prob-val {
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.72rem;
                 color: white;
                 font-weight: 500;
@@ -583,7 +583,7 @@
                 padding: 0.6rem 1.2rem;
                 border-radius: 8px;
                 border: 1.5px solid var(--border);
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.78rem;
                 color: var(--text2);
                 text-align: center;
@@ -593,8 +593,8 @@
             .layer-box.active {
                 border-color: var(--accent);
                 color: var(--accent);
-                background: rgba(99, 102, 241, 0.08);
-                box-shadow: 0 0 16px rgba(99, 102, 241, 0.15);
+                background: rgba(13, 148, 136, 0.08);
+                box-shadow: 0 0 16px rgba(13, 148, 136, 0.15);
             }
 
             /* Scroll indicator */
@@ -609,7 +609,7 @@
                 gap: 0.4rem;
                 color: var(--text3);
                 font-size: 0.75rem;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 animation: bounce 2s infinite;
             }
             @keyframes bounce {
@@ -626,10 +626,10 @@
             .q-highlight {
                 background: linear-gradient(
                     135deg,
-                    rgba(99, 102, 241, 0.1),
-                    rgba(6, 182, 212, 0.06)
+                    rgba(13, 148, 136, 0.1),
+                    rgba(217, 119, 6, 0.06)
                 );
-                border: 1.5px solid rgba(99, 102, 241, 0.2);
+                border: 1.5px solid rgba(13, 148, 136, 0.2);
                 border-radius: 12px;
                 padding: 1rem 1.4rem;
                 font-size: 1.05rem;
@@ -638,7 +638,7 @@
                 font-style: italic;
             }
             .selected-q-display {
-                font-family: "DM Serif Display", serif;
+                font-family: "Playfair Display", serif;
                 font-size: 1.25rem;
             }
 
@@ -660,7 +660,7 @@
                 border: 1.5px solid var(--border);
                 border-radius: 10px;
                 padding: 1rem 1.4rem;
-                font-family: "JetBrains Mono", monospace;
+                font-family: "IBM Plex Mono", monospace;
                 font-size: 0.9rem;
                 color: var(--accent);
                 text-align: center;
@@ -709,17 +709,17 @@
                 background: rgba(255, 255, 255, 0.7);
                 backdrop-filter: blur(14px);
                 -webkit-backdrop-filter: blur(14px);
-                border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+                border-bottom: 1px solid rgba(232, 226, 217, 0.6);
                 transition:
                     background 0.3s,
                     border-color 0.3s;
             }
             html.dark .nav-icon {
-                background: rgba(10, 10, 15, 0.75);
-                border-bottom-color: rgba(30, 30, 46, 0.7);
+                background: rgba(12, 10, 9, 0.75);
+                border-bottom-color: rgba(61, 56, 54, 0.7);
             }
             .nav-text {
-                font-family: "DM Serif Display", serif;
+                font-family: "Playfair Display", serif;
                 font-size: clamp(1.05rem, 2vw, 1.35rem);
                 line-height: 1;
                 margin: 0;
@@ -742,46 +742,7 @@
         <div class="nav-icon">
             <div class="nav-text">Inside the <em>LLM</em></div>
             <div class="nav-icons-group">
-                <a
-                    href="https://github.com/shashank-iter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style="
-                        z-index: 200;
-                        width: 42px;
-                        height: 42px;
-                        border-radius: 50%;
-                        background: var(--bg3);
-                        border: 1.5px solid var(--border);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: var(--text);
-                        transition: all 0.25s;
-                        text-decoration: none;
-                    "
-                    onmouseover="
-                        this.style.borderColor = 'var(--accent)';
-                        this.style.color = 'var(--accent)';
-                        this.style.transform = 'scale(1.1)';
-                    "
-                    onmouseout="
-                        this.style.borderColor = 'var(--border)';
-                        this.style.color = 'var(--text)';
-                        this.style.transform = 'scale(1)';
-                    "
-                >
-                    <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                    >
-                        <path
-                            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"
-                        />
-                    </svg>
-                </a>
+                
                 <button
                     id="dark-toggle"
                     onclick="toggleDark()"
@@ -866,9 +827,9 @@
                     <span
                         class="badge"
                         style="
-                            background: rgba(99, 102, 241, 0.1);
+                            background: rgba(13, 148, 136, 0.1);
                             color: var(--accent);
-                            border: 1px solid rgba(99, 102, 241, 0.2);
+                            border: 1px solid rgba(13, 148, 136, 0.2);
                         "
                         >✦ An Interactive Deep Dive</span
                     >
@@ -886,7 +847,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             letter-spacing: 0.15em;
                             text-transform: uppercase;
@@ -906,13 +867,13 @@
                         "
                     >
                         <button class="q-btn active" onclick="selectQ(0)">
-                            💬 "What is the capital of France?"
+                            💬 "Why do stars twinkle at night?"
                         </button>
                         <button class="q-btn" onclick="selectQ(1)">
-                            💬 "Explain gravity to a 5-year-old."
+                            💬 "How does a rainbow form?"
                         </button>
                         <button class="q-btn" onclick="selectQ(2)">
-                            💬 "Write a haiku about the ocean."
+                            💬 "Describe the sound of rain."
                         </button>
                     </div>
                 </div>
@@ -924,20 +885,20 @@
                         background: var(--accent);
                         color: white;
                         border: none;
-                        font-family: &quot;Outfit&quot;, sans-serif;
+                        font-family: &quot;Inter&quot;, sans-serif;
                         font-size: 0.95rem;
                         font-weight: 500;
                         cursor: pointer;
                         transition: all 0.25s;
-                        box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+                        box-shadow: 0 4px 20px rgba(13, 148, 136, 0.3);
                     "
                     onmouseover="
                         this.style.transform = 'translateY(-2px)';
-                        this.style.boxShadow = '0 8px 28px rgba(99,102,241,.4)';
+                        this.style.boxShadow = '0 8px 28px rgba(13,148,136,.4)';
                     "
                     onmouseout="
                         this.style.transform = '';
-                        this.style.boxShadow = '0 4px 20px rgba(99,102,241,.3)';
+                        this.style.boxShadow = '0 4px 20px rgba(13,148,136,.3)';
                     "
                 >
                     Begin the Journey →
@@ -999,7 +960,7 @@
                         style="
                             font-size: 0.8rem;
                             color: var(--text3);
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             margin-bottom: 0.75rem;
                             letter-spacing: 0.1em;
                         "
@@ -1007,7 +968,7 @@
                         YOUR QUESTION
                     </p>
                     <p class="selected-q-display" id="tok-question">
-                        "What is the capital of France?"
+                        "Why do stars twinkle at night?"
                     </p>
                 </div>
 
@@ -1028,7 +989,7 @@
                                 font-size: 0.8rem;
                                 color: var(--text3);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 letter-spacing: 0.1em;
                             "
                         >
@@ -1037,9 +998,9 @@
                         <span
                             class="badge"
                             style="
-                                background: rgba(16, 185, 129, 0.1);
-                                color: #10b981;
-                                border: 1px solid rgba(16, 185, 129, 0.2);
+                                background: rgba(5, 150, 105, 0.1);
+                                color: #059669;
+                                border: 1px solid rgba(5, 150, 105, 0.2);
                             "
                             id="tok-count"
                             >8 tokens</span
@@ -1084,7 +1045,7 @@
                                 <span
                                     class="badge"
                                     style="
-                                        background: rgba(99, 102, 241, 0.1);
+                                        background: rgba(13, 148, 136, 0.1);
                                         color: var(--accent);
                                     "
                                     >Un</span
@@ -1093,7 +1054,7 @@
                                 <span
                                     class="badge"
                                     style="
-                                        background: rgba(6, 182, 212, 0.1);
+                                        background: rgba(217, 119, 6, 0.1);
                                         color: var(--accent2);
                                     "
                                     >happiness</span
@@ -1168,7 +1129,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.7rem;
                             color: var(--accent);
                             letter-spacing: 0.12em;
@@ -1205,8 +1166,8 @@
                     <p class="analogy-text">
                         Imagine every word having a GPS location in a huge
                         multi-dimensional city. "King" and "Queen" live near
-                        each other. "Paris" and "London" are neighbours.
-                        "Banana" is far from both. Embeddings are those GPS
+                        each other. "Stars" and "Moon" are neighbours.
+                        "Umbrella" is far from both. Embeddings are those GPS
                         coordinates — but in 768 dimensions instead of 2!
                     </p>
                 </div>
@@ -1230,7 +1191,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -1322,7 +1283,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -1351,7 +1312,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -1374,14 +1335,14 @@
                                 class="card-sm"
                                 style="
                                     padding: 0.75rem 1rem;
-                                    background: rgba(99, 102, 241, 0.08);
-                                    border-color: rgba(99, 102, 241, 0.25);
+                                    background: rgba(13, 148, 136, 0.08);
+                                    border-color: rgba(13, 148, 136, 0.25);
                                 "
                             >
                                 <p
                                     style="
                                         font-family:
-                                            &quot;JetBrains Mono&quot;,
+                                            &quot;IBM Plex Mono&quot;,
                                             monospace;
                                         font-size: 0.7rem;
                                         color: var(--accent);
@@ -1392,7 +1353,7 @@
                                 <p
                                     style="
                                         font-family:
-                                            &quot;JetBrains Mono&quot;,
+                                            &quot;IBM Plex Mono&quot;,
                                             monospace;
                                         font-size: 0.8rem;
                                         color: var(--text);
@@ -1419,14 +1380,14 @@
                                 class="card-sm"
                                 style="
                                     padding: 0.75rem 1rem;
-                                    background: rgba(6, 182, 212, 0.08);
-                                    border-color: rgba(6, 182, 212, 0.25);
+                                    background: rgba(217, 119, 6, 0.08);
+                                    border-color: rgba(217, 119, 6, 0.25);
                                 "
                             >
                                 <p
                                     style="
                                         font-family:
-                                            &quot;JetBrains Mono&quot;,
+                                            &quot;IBM Plex Mono&quot;,
                                             monospace;
                                         font-size: 0.7rem;
                                         color: var(--accent2);
@@ -1437,7 +1398,7 @@
                                 <p
                                     style="
                                         font-family:
-                                            &quot;JetBrains Mono&quot;,
+                                            &quot;IBM Plex Mono&quot;,
                                             monospace;
                                         font-size: 0.8rem;
                                         color: var(--text);
@@ -1464,14 +1425,14 @@
                                 class="card-sm"
                                 style="
                                     padding: 0.75rem 1rem;
-                                    background: rgba(16, 185, 129, 0.08);
-                                    border-color: rgba(16, 185, 129, 0.25);
+                                    background: rgba(5, 150, 105, 0.08);
+                                    border-color: rgba(5, 150, 105, 0.25);
                                 "
                             >
                                 <p
                                     style="
                                         font-family:
-                                            &quot;JetBrains Mono&quot;,
+                                            &quot;IBM Plex Mono&quot;,
                                             monospace;
                                         font-size: 0.7rem;
                                         color: var(--accent4);
@@ -1482,7 +1443,7 @@
                                 <p
                                     style="
                                         font-family:
-                                            &quot;JetBrains Mono&quot;,
+                                            &quot;IBM Plex Mono&quot;,
                                             monospace;
                                         font-size: 0.8rem;
                                         color: var(--text);
@@ -1552,7 +1513,7 @@
                     how the model knows that in "The animal didn't cross the
                     street because
                     <strong style="color: var(--accent)">it</strong> was too
-                    tired", <em>it</em> refers to the animal, not the street.
+                    tired", <em>it</em> refers to the stars, not the night.
                 </p>
 
                 <div class="analogy-box fade-up">
@@ -1573,7 +1534,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -1595,8 +1556,8 @@
                                 text-align: center;
                                 padding: 1rem;
                                 border-radius: 10px;
-                                background: rgba(99, 102, 241, 0.07);
-                                border: 1.5px solid rgba(99, 102, 241, 0.2);
+                                background: rgba(13, 148, 136, 0.07);
+                                border: 1.5px solid rgba(13, 148, 136, 0.2);
                             "
                         >
                             <div
@@ -1607,7 +1568,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.8rem;
                                     font-weight: 600;
                                     color: var(--accent);
@@ -1632,8 +1593,8 @@
                                 text-align: center;
                                 padding: 1rem;
                                 border-radius: 10px;
-                                background: rgba(245, 158, 11, 0.07);
-                                border: 1.5px solid rgba(245, 158, 11, 0.2);
+                                background: rgba(225, 29, 72, 0.07);
+                                border: 1.5px solid rgba(225, 29, 72, 0.2);
                             "
                         >
                             <div
@@ -1644,7 +1605,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.8rem;
                                     font-weight: 600;
                                     color: var(--accent3);
@@ -1669,8 +1630,8 @@
                                 text-align: center;
                                 padding: 1rem;
                                 border-radius: 10px;
-                                background: rgba(16, 185, 129, 0.07);
-                                border: 1.5px solid rgba(16, 185, 129, 0.2);
+                                background: rgba(5, 150, 105, 0.07);
+                                border: 1.5px solid rgba(5, 150, 105, 0.2);
                             "
                         >
                             <div
@@ -1681,7 +1642,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.8rem;
                                     font-weight: 600;
                                     color: var(--accent4);
@@ -1728,7 +1689,7 @@
                         <p
                             style="
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--text3);
                                 letter-spacing: 0.12em;
@@ -1744,9 +1705,9 @@
                                 id="head-btn-0"
                                 class="badge"
                                 style="
-                                    background: rgba(99, 102, 241, 0.15);
+                                    background: rgba(13, 148, 136, 0.15);
                                     color: var(--accent);
-                                    border: 1px solid rgba(99, 102, 241, 0.3);
+                                    border: 1px solid rgba(13, 148, 136, 0.3);
                                     cursor: pointer;
                                 "
                             >
@@ -1785,8 +1746,8 @@
                         Brighter cells = stronger attention. Each row is a token
                         asking "what should I pay attention to?" Each column is
                         a token answering "how relevant am I?" Notice how
-                        "capital" strongly attends to "France" — the model
-                        connects these to produce "Paris".
+                        "stars" strongly attends to "twinkle" — the model
+                        connects these to produce the answer.
                     </p>
                 </div>
 
@@ -1797,7 +1758,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -1892,7 +1853,7 @@
                         <p
                             style="
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--text3);
                                 letter-spacing: 0.12em;
@@ -1903,9 +1864,9 @@
                         <span
                             class="badge"
                             style="
-                                background: rgba(99, 102, 241, 0.1);
+                                background: rgba(13, 148, 136, 0.1);
                                 color: var(--accent);
-                                border: 1px solid rgba(99, 102, 241, 0.2);
+                                border: 1px solid rgba(13, 148, 136, 0.2);
                             "
                             >WebGL • Interactive</span
                         >
@@ -1931,27 +1892,27 @@
                         <span
                             class="badge"
                             style="
-                                background: rgba(99, 102, 241, 0.1);
+                                background: rgba(13, 148, 136, 0.1);
                                 color: var(--accent);
-                                border: 1px solid rgba(99, 102, 241, 0.2);
+                                border: 1px solid rgba(13, 148, 136, 0.2);
                             "
                             >● Question words</span
                         >
                         <span
                             class="badge"
                             style="
-                                background: rgba(245, 158, 11, 0.1);
+                                background: rgba(225, 29, 72, 0.1);
                                 color: var(--accent3);
-                                border: 1px solid rgba(245, 158, 11, 0.2);
+                                border: 1px solid rgba(225, 29, 72, 0.2);
                             "
                             >● Nouns / proper nouns</span
                         >
                         <span
                             class="badge"
                             style="
-                                background: rgba(16, 185, 129, 0.1);
+                                background: rgba(5, 150, 105, 0.1);
                                 color: var(--accent4);
-                                border: 1px solid rgba(16, 185, 129, 0.2);
+                                border: 1px solid rgba(5, 150, 105, 0.2);
                             "
                             >● Function words</span
                         >
@@ -1962,7 +1923,7 @@
                     class="card-sm fade-up"
                     style="
                         padding: 0.75rem 1.1rem;
-                        font-family: &quot;JetBrains Mono&quot;, monospace;
+                        font-family: &quot;IBM Plex Mono&quot;, monospace;
                         font-size: 0.8rem;
                         color: var(--text2);
                         min-height: 2.8rem;
@@ -2008,7 +1969,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2066,7 +2027,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2089,14 +2050,14 @@
                                 style="
                                     width: 60px;
                                     height: 80px;
-                                    background: rgba(99, 102, 241, 0.1);
-                                    border: 1.5px solid rgba(99, 102, 241, 0.25);
+                                    background: rgba(13, 148, 136, 0.1);
+                                    border: 1.5px solid rgba(13, 148, 136, 0.25);
                                     border-radius: 8px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.65rem;
                                     color: var(--accent);
                                     margin: 0 auto 0.5rem;
@@ -2133,14 +2094,14 @@
                                 style="
                                     width: 60px;
                                     height: 120px;
-                                    background: rgba(245, 158, 11, 0.1);
-                                    border: 1.5px solid rgba(245, 158, 11, 0.25);
+                                    background: rgba(225, 29, 72, 0.1);
+                                    border: 1.5px solid rgba(225, 29, 72, 0.25);
                                     border-radius: 8px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.65rem;
                                     color: var(--accent3);
                                     margin: 0 auto 0.5rem;
@@ -2155,12 +2116,12 @@
                         <div style="text-align: center">
                             <div
                                 style="
-                                    background: rgba(16, 185, 129, 0.1);
-                                    border: 1.5px solid rgba(16, 185, 129, 0.25);
+                                    background: rgba(5, 150, 105, 0.1);
+                                    border: 1.5px solid rgba(5, 150, 105, 0.25);
                                     border-radius: 6px;
                                     padding: 0.3rem 0.6rem;
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.7rem;
                                     color: var(--accent4);
                                 "
@@ -2202,14 +2163,14 @@
                                 style="
                                     width: 60px;
                                     height: 80px;
-                                    background: rgba(99, 102, 241, 0.1);
-                                    border: 1.5px solid rgba(99, 102, 241, 0.25);
+                                    background: rgba(13, 148, 136, 0.1);
+                                    border: 1.5px solid rgba(13, 148, 136, 0.25);
                                     border-radius: 8px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.65rem;
                                     color: var(--accent);
                                     margin: 0 auto 0.5rem;
@@ -2251,7 +2212,7 @@
                                 padding: 0.1em 0.4em;
                                 border-radius: 4px;
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.82rem;
                             "
                             >output = sublayer(x) + x</code
@@ -2309,7 +2270,7 @@
                         <p
                             style="
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--text3);
                                 letter-spacing: 0.12em;
@@ -2317,15 +2278,16 @@
                         >
                             TOP CANDIDATE NEXT TOKENS
                         </p>
+
                         <span
                             class="badge"
                             style="
-                                background: rgba(99, 102, 241, 0.1);
+                                background: rgba(13, 148, 136, 0.1);
                                 color: var(--accent);
-                                border: 1px solid rgba(99, 102, 241, 0.2);
+                                border: 1px solid rgba(13, 148, 136, 0.2);
                             "
                             id="logit-q-label"
-                            >Q: Capital of France?</span
+                            >Q: Stars twinkle?</span
                         >
                     </div>
                     <div id="logit-bars"></div>
@@ -2337,7 +2299,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2359,8 +2321,8 @@
                     </p>
                 </div>
 
-                <div class="formula fade-up">
-                    P(token_i) = e^(logit_i) / Σ e^(logit_j) for all j
+                                <div class="formula fade-up" style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; letter-spacing: 0.05em; text-transform: none;">
+                    P(token<sub>i</sub>) = e<sup>logit<sub>i</sub></sup> / &Sigma; e<sup>logit<sub>j</sub></sup> <span style="font-style: normal; font-size: 1rem; margin-left: 0.5rem; font-family: 'IBM Plex Mono', monospace;">for all j</span>
                 </div>
             </div>
         </section>
@@ -2398,7 +2360,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2414,7 +2376,7 @@
                             class="q-btn active"
                             style="font-size: 0.82rem; padding: 0.55rem 1rem"
                         >
-                            Capital of France?
+                            Stars twinkle?
                         </button>
                         <button
                             onclick="setTempQ(1)"
@@ -2422,7 +2384,7 @@
                             class="q-btn"
                             style="font-size: 0.82rem; padding: 0.55rem 1rem"
                         >
-                            Explain gravity?
+                            Rainbow form?
                         </button>
                         <button
                             onclick="setTempQ(2)"
@@ -2430,7 +2392,7 @@
                             class="q-btn"
                             style="font-size: 0.82rem; padding: 0.55rem 1rem"
                         >
-                            Haiku about ocean?
+                            Sound of rain?
                         </button>
                     </div>
                 </div>
@@ -2451,7 +2413,7 @@
                         <p
                             style="
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--text3);
                                 letter-spacing: 0.12em;
@@ -2474,7 +2436,7 @@
                                 id="temp-val"
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 1.1rem;
                                     font-weight: 600;
                                     color: var(--accent);
@@ -2497,7 +2459,7 @@
                             display: flex;
                             justify-content: space-between;
                             margin-top: 0.5rem;
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.65rem;
                             color: var(--text3);
                         "
@@ -2527,7 +2489,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2560,7 +2522,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 0.72rem;
                                     color: var(--text3);
                                     letter-spacing: 0.12em;
@@ -2594,7 +2556,7 @@
                                 id="topp-val"
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 1.1rem;
                                     font-weight: 600;
                                     color: var(--accent2);
@@ -2629,7 +2591,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2652,9 +2614,9 @@
                             class="badge"
                             id="temp-badge"
                             style="
-                                background: rgba(16, 185, 129, 0.1);
+                                background: rgba(5, 150, 105, 0.1);
                                 color: var(--accent4);
-                                border: 1px solid rgba(16, 185, 129, 0.2);
+                                border: 1px solid rgba(5, 150, 105, 0.2);
                             "
                         >
                             ✓ Focused
@@ -2716,7 +2678,7 @@
                         <p
                             style="
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--text3);
                                 letter-spacing: 0.12em;
@@ -2748,7 +2710,7 @@
                         id="gen-output"
                         style="
                             min-height: 80px;
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.9rem;
                         "
                     ></div>
@@ -2775,7 +2737,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2797,7 +2759,7 @@
                             <div
                                 class="layer-box"
                                 style="
-                                    border-color: rgba(99, 102, 241, 0.3);
+                                    border-color: rgba(13, 148, 136, 0.3);
                                     color: var(--accent);
                                 "
                             >
@@ -2846,7 +2808,7 @@
                             <div
                                 class="layer-box"
                                 style="
-                                    border-color: rgba(16, 185, 129, 0.3);
+                                    border-color: rgba(5, 150, 105, 0.3);
                                     color: var(--accent4);
                                 "
                             >
@@ -2866,7 +2828,7 @@
                             <div
                                 class="layer-box"
                                 style="
-                                    border-color: rgba(99, 102, 241, 0.3);
+                                    border-color: rgba(13, 148, 136, 0.3);
                                     color: var(--accent);
                                 "
                             >
@@ -2896,7 +2858,7 @@
                                 font-size: 0.72rem;
                                 color: var(--text3);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                             "
                         >
                             loops until [END] token or max length
@@ -2911,7 +2873,7 @@
                 >
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -2935,7 +2897,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 1.6rem;
                                     font-weight: 600;
                                     color: var(--accent);
@@ -2961,7 +2923,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 1.6rem;
                                     font-weight: 600;
                                     color: var(--accent2);
@@ -2986,7 +2948,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 1.6rem;
                                     font-weight: 600;
                                     color: var(--accent3);
@@ -3012,7 +2974,7 @@
                             <p
                                 style="
                                     font-family:
-                                        &quot;JetBrains Mono&quot;, monospace;
+                                        &quot;IBM Plex Mono&quot;, monospace;
                                     font-size: 1.6rem;
                                     font-weight: 600;
                                     color: var(--accent4);
@@ -3037,7 +2999,7 @@
                 <div class="card fade-up" style="padding: 1.5rem">
                     <p
                         style="
-                            font-family: &quot;JetBrains Mono&quot;, monospace;
+                            font-family: &quot;IBM Plex Mono&quot;, monospace;
                             font-size: 0.72rem;
                             color: var(--text3);
                             letter-spacing: 0.12em;
@@ -3060,10 +3022,10 @@
                             style="
                                 padding: 0.5rem 0.9rem;
                                 border-radius: 8px;
-                                background: rgba(99, 102, 241, 0.08);
-                                border: 1px solid rgba(99, 102, 241, 0.2);
+                                background: rgba(13, 148, 136, 0.08);
+                                border: 1px solid rgba(13, 148, 136, 0.2);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent);
                                 cursor: pointer;
@@ -3085,7 +3047,7 @@
                                 background: rgba(6, 182, 212, 0.08);
                                 border: 1px solid rgba(6, 182, 212, 0.2);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent2);
                                 cursor: pointer;
@@ -3107,7 +3069,7 @@
                                 background: rgba(245, 158, 11, 0.08);
                                 border: 1px solid rgba(245, 158, 11, 0.2);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent3);
                                 cursor: pointer;
@@ -3126,10 +3088,10 @@
                             style="
                                 padding: 0.5rem 0.9rem;
                                 border-radius: 8px;
-                                background: rgba(16, 185, 129, 0.08);
-                                border: 1px solid rgba(16, 185, 129, 0.2);
+                                background: rgba(5, 150, 105, 0.08);
+                                border: 1px solid rgba(5, 150, 105, 0.2);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent4);
                                 cursor: pointer;
@@ -3148,10 +3110,10 @@
                             style="
                                 padding: 0.5rem 0.9rem;
                                 border-radius: 8px;
-                                background: rgba(99, 102, 241, 0.08);
-                                border: 1px solid rgba(99, 102, 241, 0.2);
+                                background: rgba(13, 148, 136, 0.08);
+                                border: 1px solid rgba(13, 148, 136, 0.2);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent);
                                 cursor: pointer;
@@ -3173,7 +3135,7 @@
                                 background: rgba(6, 182, 212, 0.08);
                                 border: 1px solid rgba(6, 182, 212, 0.2);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent2);
                                 cursor: pointer;
@@ -3195,7 +3157,7 @@
                                 background: rgba(245, 158, 11, 0.08);
                                 border: 1px solid rgba(245, 158, 11, 0.2);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent3);
                                 cursor: pointer;
@@ -3213,10 +3175,10 @@
                             style="
                                 padding: 0.5rem 0.9rem;
                                 border-radius: 8px;
-                                background: rgba(16, 185, 129, 0.1);
-                                border: 1.5px solid rgba(16, 185, 129, 0.3);
+                                background: rgba(5, 150, 105, 0.1);
+                                border: 1.5px solid rgba(5, 150, 105, 0.3);
                                 font-family:
-                                    &quot;JetBrains Mono&quot;, monospace;
+                                    &quot;IBM Plex Mono&quot;, monospace;
                                 font-size: 0.72rem;
                                 color: var(--accent4);
                             "
@@ -3255,264 +3217,246 @@
             let threeScene = null;
 
             const QUESTIONS = [
-                "What is the capital of France?",
-                "Explain gravity to a 5-year-old.",
-                "Write a haiku about the ocean.",
+                "Why do stars twinkle?",
+                "How does a rainbow form?",
+                "Describe the sound of rain.",
             ];
 
             const TOKENS_DATA = [
                 [
-                    { text: "What", id: 2061, color: "#6366f1" },
-                    { text: "is", id: 374, color: "#8b5cf6" },
-                    { text: "the", id: 279, color: "#8b5cf6" },
-                    { text: "capital", id: 6864, color: "#06b6d4" },
-                    { text: "of", id: 315, color: "#8b5cf6" },
-                    { text: "France", id: 9822, color: "#f59e0b" },
-                    { text: "?", id: 30, color: "#94a3b8" },
+                    { text: "Why", id: 5765, color: "#0d9488" },
+                    { text: "do", id: 656, color: "#14b8a6" },
+                    { text: "stars", id: 48915, color: "#e11d48" },
+                    { text: "tw", id: 23592, color: "#d97706" },
+                    { text: "inkle", id: 8520, color: "#d97706" },
+                    { text: "at", id: 520, color: "#14b8a6" },
+                    { text: "night", id: 3847, color: "#e11d48" },
+                    { text: "?", id: 30, color: "#a8a29e" },
                 ],
                 [
-                    { text: "Explain", id: 40914, color: "#6366f1" },
-                    { text: "gravity", id: 31586, color: "#06b6d4" },
-                    { text: "to", id: 311, color: "#8b5cf6" },
-                    { text: "a", id: 264, color: "#8b5cf6" },
-                    { text: "5", id: 20, color: "#f59e0b" },
-                    { text: "-year", id: 4771, color: "#94a3b8" },
-                    { text: "-old", id: 10539, color: "#94a3b8" },
-                    { text: ".", id: 13, color: "#94a3b8" },
+                    { text: "How", id: 2437, color: "#0d9488" },
+                    { text: "does", id: 1587, color: "#14b8a6" },
+                    { text: "a", id: 264, color: "#14b8a6" },
+                    { text: "rain", id: 11589, color: "#e11d48" },
+                    { text: "bow", id: 8176, color: "#e11d48" },
+                    { text: "form", id: 1296, color: "#d97706" },
+                    { text: "?", id: 30, color: "#a8a29e" },
                 ],
                 [
-                    { text: "Write", id: 8238, color: "#6366f1" },
-                    { text: "a", id: 264, color: "#8b5cf6" },
-                    { text: "haiku", id: 58025, color: "#06b6d4" },
-                    { text: "about", id: 922, color: "#8b5cf6" },
-                    { text: "the", id: 279, color: "#8b5cf6" },
-                    { text: "ocean", id: 15162, color: "#f59e0b" },
-                    { text: ".", id: 13, color: "#94a3b8" },
-                ],
+                    { text: "Describe", id: 4002, color: "#0d9488" },
+                    { text: "the", id: 279, color: "#14b8a6" },
+                    { text: "sound", id: 2128, color: "#d97706" },
+                    { text: "of", id: 315, color: "#14b8a6" },
+                    { text: "rain", id: 11589, color: "#e11d48" },
+                    { text: ".", id: 13, color: "#a8a29e" },
+                ]
             ];
 
             const TOKEN_DETAILS = [
-                "function word — connects parts of a sentence",
-                "copula verb — links subject to predicate",
-                "definite article — points to a specific thing",
-                "noun — a place of governmental importance",
-                "preposition — shows relationship",
-                "proper noun — a country in Western Europe",
+                "question word — asks for a reason",
+                "auxiliary verb — supports the main verb",
+                "noun — luminous points in the night sky",
+                "subword — first part of twinkle",
+                "subword — second part of twinkle",
+                "preposition — indicates time or place",
+                "noun — the period of darkness",
                 "punctuation — marks end of question",
             ];
 
             // Attention heads data (for 7 tokens of Q0)
             const ATTN_HEADS = [
-                // Head 0: syntactic — "capital" attends to "France" strongly
+                // Head 0: syntactic
                 [
-                    [1.0, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
-                    [0.1, 1.0, 0.2, 0.1, 0.1, 0.1, 0.1],
-                    [0.1, 0.2, 1.0, 0.1, 0.1, 0.1, 0.1],
-                    [0.05, 0.1, 0.1, 1.0, 0.15, 0.85, 0.1],
-                    [0.1, 0.1, 0.1, 0.1, 1.0, 0.1, 0.1],
-                    [0.1, 0.05, 0.1, 0.8, 0.1, 1.0, 0.1],
-                    [0.2, 0.1, 0.2, 0.4, 0.1, 0.5, 1.0],
+                    [1.0, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+                    [0.1, 1.0, 0.2, 0.1, 0.1, 0.1, 0.1, 0.1],
+                    [0.1, 0.1, 1.0, 0.7, 0.6, 0.1, 0.8, 0.1],
+                    [0.1, 0.1, 0.8, 1.0, 0.9, 0.1, 0.2, 0.1],
+                    [0.1, 0.1, 0.7, 0.9, 1.0, 0.1, 0.2, 0.1],
+                    [0.1, 0.1, 0.1, 0.1, 0.1, 1.0, 0.5, 0.1],
+                    [0.1, 0.1, 0.85, 0.3, 0.2, 0.5, 1.0, 0.2],
+                    [0.2, 0.1, 0.3, 0.4, 0.3, 0.1, 0.5, 1.0],
                 ],
-                // Head 1: semantic — question words attend to each other
+                // Head 1: semantic
                 [
-                    [1.0, 0.6, 0.4, 0.2, 0.2, 0.1, 0.3],
-                    [0.5, 1.0, 0.5, 0.1, 0.1, 0.1, 0.1],
-                    [0.4, 0.5, 1.0, 0.1, 0.1, 0.1, 0.1],
-                    [0.1, 0.1, 0.1, 1.0, 0.5, 0.6, 0.2],
-                    [0.1, 0.1, 0.1, 0.5, 1.0, 0.5, 0.1],
-                    [0.1, 0.1, 0.1, 0.6, 0.5, 1.0, 0.1],
-                    [0.3, 0.2, 0.2, 0.3, 0.2, 0.4, 1.0],
+                    [1.0, 0.6, 0.2, 0.1, 0.1, 0.2, 0.1, 0.3],
+                    [0.5, 1.0, 0.3, 0.1, 0.1, 0.1, 0.1, 0.1],
+                    [0.2, 0.2, 1.0, 0.5, 0.5, 0.1, 0.7, 0.1],
+                    [0.1, 0.1, 0.5, 1.0, 0.8, 0.1, 0.3, 0.1],
+                    [0.1, 0.1, 0.5, 0.8, 1.0, 0.1, 0.3, 0.1],
+                    [0.1, 0.1, 0.1, 0.1, 0.1, 1.0, 0.6, 0.1],
+                    [0.1, 0.1, 0.7, 0.3, 0.3, 0.6, 1.0, 0.2],
+                    [0.3, 0.2, 0.2, 0.2, 0.2, 0.1, 0.3, 1.0],
                 ],
-                // Head 2: positional — attends to adjacent tokens
+                // Head 2: positional
                 [
-                    [1.0, 0.7, 0.2, 0.1, 0.05, 0.05, 0.05],
-                    [0.7, 1.0, 0.7, 0.2, 0.1, 0.05, 0.05],
-                    [0.2, 0.7, 1.0, 0.7, 0.2, 0.1, 0.05],
-                    [0.1, 0.2, 0.7, 1.0, 0.7, 0.2, 0.1],
-                    [0.05, 0.1, 0.2, 0.7, 1.0, 0.7, 0.2],
-                    [0.05, 0.05, 0.1, 0.2, 0.7, 1.0, 0.7],
-                    [0.05, 0.05, 0.05, 0.1, 0.2, 0.7, 1.0],
-                ],
+                    [1.0, 0.7, 0.2, 0.1, 0.05, 0.05, 0.05, 0.05],
+                    [0.7, 1.0, 0.7, 0.2, 0.1, 0.05, 0.05, 0.05],
+                    [0.2, 0.7, 1.0, 0.7, 0.2, 0.1, 0.05, 0.05],
+                    [0.1, 0.2, 0.7, 1.0, 0.7, 0.2, 0.1, 0.05],
+                    [0.05, 0.1, 0.2, 0.7, 1.0, 0.7, 0.2, 0.1],
+                    [0.05, 0.05, 0.1, 0.2, 0.7, 1.0, 0.7, 0.2],
+                    [0.05, 0.05, 0.05, 0.1, 0.2, 0.7, 1.0, 0.7],
+                    [0.05, 0.05, 0.05, 0.05, 0.1, 0.2, 0.7, 1.0],
+                ]
             ];
 
             // Logits data for each question
             const LOGITS_DATA = [
                 {
-                    label: "Q: Capital of France?",
+                    label: "Q: Stars twinkle?",
                     tokens: [
-                        "Paris",
-                        "The",
-                        "Lyon",
-                        "It",
-                        "France",
-                        "Capital",
-                        "city",
-                        "Located",
+                        "Stars", "The", "Because", "When", "Light", "Earth", "Atmosphere", "They",
                     ],
-                    raw: [8.4, 3.2, 2.1, 1.8, 1.5, 1.2, 0.9, 0.4],
+                    raw: [8.1, 4.2, 3.8, 3.1, 2.6, 2.1, 1.5, 0.9],
                 },
                 {
-                    label: "Q: Explain gravity?",
+                    label: "Q: Rainbow form?",
                     tokens: [
-                        "Gravity",
-                        "Well",
-                        "Imagine",
-                        "Think",
-                        "When",
-                        "You",
-                        "It",
-                        "Like",
+                        "A", "Rain", "When", "Light", "Sun", "The", "Water", "Colors",
                     ],
-                    raw: [7.2, 5.1, 4.8, 3.9, 3.2, 2.8, 2.1, 1.6],
+                    raw: [7.5, 5.8, 4.6, 4.1, 3.4, 2.9, 2.2, 1.4],
                 },
                 {
-                    label: "Q: Haiku about ocean?",
+                    label: "Q: Sound of rain?",
                     tokens: [
-                        "Waves",
-                        "Ocean",
-                        "The",
-                        "Dark",
-                        "Blue",
-                        "Salt",
-                        "Beneath",
-                        "Tides",
+                        "The", "Rain", "A", "Soft", "Gentle", "Patter", "Drops", "Rhythm",
                     ],
-                    raw: [6.8, 5.4, 4.9, 3.7, 3.5, 2.9, 2.4, 1.8],
+                    raw: [7.0, 5.6, 5.1, 3.9, 3.3, 2.7, 2.1, 1.6],
                 },
             ];
 
             // Temp output samples
             const TEMP_OUTPUTS = [
                 [
-                    // Q0: capital of France
+                    // Q0: stars twinkle
                     {
                         t: 0.1,
-                        text: "Paris.",
+                        text: "Stars twinkle because of atmospheric turbulence.",
                         badge: "🎯 Deterministic",
                         desc: "T<0.3 — model always picks highest probability token",
                         color: "var(--accent4)",
                     },
                     {
                         t: 0.5,
-                        text: "The capital of France is Paris.",
+                        text: "Stars twinkle because of atmospheric turbulence.",
                         badge: "✓ Focused",
                         desc: "T=0.5 — confident, correct, slightly terse",
                         color: "var(--accent)",
                     },
                     {
                         t: 1.0,
-                        text: "The capital of France is Paris, a city known for the Eiffel Tower and rich culture.",
+                        text: "Stars appear to twinkle because their light travels through layers of moving air in Earth's atmosphere, bending and shifting as it reaches your eyes.",
                         badge: "⚖ Balanced",
                         desc: "T=1.0 — natural, fluent, adds context",
                         color: "var(--accent2)",
                     },
                     {
                         t: 1.5,
-                        text: "France's capital city Paris has long been... arguably the most romantic destination in the European continent.",
+                        text: "The phenomenon of stellar scintillation occurs when photons from distant suns refract through thermally turbulent atmospheric layers, creating a mesmerizing dance of brightness.",
                         badge: "🎨 Creative",
                         desc: "T=1.5 — verbose, diverges slightly",
                         color: "var(--accent3)",
                     },
                     {
                         t: 2.0,
-                        text: "Well Paris or sometimes Lyon represents the concept of capitaling a warm baguette nation...",
+                        text: "Twinkling happens when the starlight photon-bends across thermal pockets of sky-breathing atmosphere and wobbles through the cosmic viewing tunnel...",
                         badge: "🌪 Chaotic",
                         desc: "T>1.8 — incoherent, random token selection",
                         color: "#ef4444",
                     },
                     {
                         t: 3.0,
-                        text: "The giraffe sidewalk France baguette capital sometimes glows purple near the Eiffel...",
+                        text: "The sparkle-dance of celestial jellyfish swimming through cotton atmosphere blankets of purple nitrogen dreams...",
                         badge: "💥 Random",
                         desc: "T>2.5 — nonsensical, distribution nearly uniform",
                         color: "#dc2626",
                     },
                 ],
                 [
-                    // Q1: gravity
+                    // Q1: rainbow
                     {
                         t: 0.1,
-                        text: "Gravity pulls things down.",
+                        text: "Sunlight splits through raindrops.",
                         badge: "🎯 Deterministic",
                         desc: "T<0.3 — correct, terse, predictable",
                         color: "var(--accent4)",
                     },
                     {
                         t: 0.5,
-                        text: "Gravity is a force that pulls everything toward the ground.",
+                        text: "A rainbow forms when sunlight refracts through water droplets in the air.",
                         badge: "✓ Focused",
                         desc: "T=0.5 — clear and accurate",
                         color: "var(--accent)",
                     },
                     {
                         t: 1.0,
-                        text: "Imagine you have a heavy ball on a stretchy blanket. It makes a dent. That dent pulls other things toward it — that's gravity!",
+                        text: "When sunlight enters a raindrop, it slows down and bends. The light bounces off the back of the drop, then bends again as it exits splitting into all the colors we see in a rainbow!",
                         badge: "⚖ Balanced",
                         desc: "T=1.0 — analogy-rich, friendly",
                         color: "var(--accent2)",
                     },
                     {
                         t: 1.5,
-                        text: "Okay, so you know how when you drop your toy it falls? The Earth is like a super-giant magnet pulling everything toward it!",
+                        text: "Picture each raindrop as a tiny crystal prism catching the sun. Millions of them work together like a curved screen painting colors across the sky!",
                         badge: "🎨 Creative",
                         desc: "T=1.5 — playful, slight inaccuracy",
                         color: "var(--accent3)",
                     },
                     {
                         t: 2.0,
-                        text: "Gravity is when the heavy sky pushes you hugging toward the ground-planet because molecules love each other very much!",
+                        text: "Rainbows happen when the sky-crystals of water reflect the sun-paint inside their bellies and throw color-confetti across the misty canvas!",
                         badge: "🌪 Chaotic",
                         desc: "T>1.8 — charming but scientifically questionable",
                         color: "#ef4444",
                     },
                     {
                         t: 3.0,
-                        text: "The sky jumps sideways pulling electrons of sunshine heavy dance toward the wonderful grape floor...",
+                        text: "The prism-jellyfish of cloud-water absorb seventeen spectrum-emotions and radiate purple-dance across the weather-painting...",
                         badge: "💥 Random",
                         desc: "T>2.5 — word salad",
                         color: "#dc2626",
                     },
                 ],
                 [
-                    // Q2: haiku
+                    // Q2: sound of rain
                     {
                         t: 0.1,
-                        text: "Ocean waves crash down / Salt and foam meet the dark shore / Silence follows them",
+                        text: "Rain taps on the roof, a soft rhythmic drumming.",
                         badge: "🎯 Deterministic",
                         desc: "T<0.3 — structurally perfect, but predictable",
                         color: "var(--accent4)",
                     },
                     {
                         t: 0.5,
-                        text: "Endless blue water / Waves whisper ancient secrets / The tide pulls us home",
+                        text: "The sound of rain is a gentle patter, like tiny fingers tapping on glass.",
                         badge: "✓ Focused",
                         desc: "T=0.5 — elegant and coherent",
                         color: "var(--accent)",
                     },
                     {
                         t: 1.0,
-                        text: "Salt-kissed horizon / Waves erase footprints in sand / The moon calls the tide",
+                        text: "Rain sounds like the world whispering. Each drop is a soft syllable, together forming a lullaby that hushes the city into stillness.",
                         badge: "⚖ Balanced",
                         desc: "T=1.0 — poetic and vivid imagery",
                         color: "var(--accent2)",
                     },
                     {
                         t: 1.5,
-                        text: "Deep midnight water / Bioluminescence glows / Stars sink beneath waves",
+                        text: "There's something ancient about rain on a tin roof. It's percussive and meditative, like the earth is playing a song it half-remembers from a dream.",
                         badge: "🎨 Creative",
                         desc: "T=1.5 — unexpected imagery, still coherent",
                         color: "var(--accent3)",
                     },
                     {
                         t: 2.0,
-                        text: "Seagull blanket drifts / Beneath the purple tidal song / Whispering salt clouds",
+                        text: "Rain is the trembling percussion of sky-tears against forgotten umbrellas, each note a dissolving memory of clouds.",
                         badge: "🌪 Chaotic",
                         desc: "T>1.8 — evocative but surreal",
                         color: "#ef4444",
                     },
                     {
                         t: 3.0,
-                        text: "Grandmother ocean / seventeen blue crab emotions / the foam sleeps dancing",
+                        text: "Eleven wet frequencies of sidewalk-melody dripping through the nostalgic saxophone of broken gutters...",
                         badge: "💥 Random",
                         desc: "T>2.5 — accidentally poetic nonsense",
                         color: "#dc2626",
@@ -3523,55 +3467,45 @@
             // Generation outputs
             const GEN_OUTPUTS = [
                 {
-                    q: "The capital of France is Paris.",
+                    q: "Stars twinkle because of atmospheric turbulence.",
+                    tokens: [
+                        "Stars",
+                        "twinkle",
+                        "because",
+                        "of",
+                        "atmospheric",
+                        "turbulence",
+                        "."
+                    ]
+                },
+                {
+                    q: "Rainbows form when sunlight reflects inside water droplets.",
+                    tokens: [
+                        "Rainbows",
+                        "form",
+                        "when",
+                        "sunlight",
+                        "reflects",
+                        "inside",
+                        "water",
+                        "droplets",
+                        "."
+                    ]
+                },
+                {
+                    q: "The sound of rain is a gentle patter.",
                     tokens: [
                         "The",
-                        "capital",
+                        "sound",
                         "of",
-                        "France",
+                        "rain",
                         "is",
-                        "Paris",
-                        ".",
-                    ],
-                },
-                {
-                    q: "Gravity is like a big invisible hand that pulls everything toward the Earth.",
-                    tokens: [
-                        "Gravity",
-                        "is",
-                        "like",
                         "a",
-                        "big",
-                        "invisible",
-                        "hand",
-                        "that",
-                        "pulls",
-                        "everything",
-                        "toward",
-                        "the",
-                        "Earth",
-                        ".",
-                    ],
-                },
-                {
-                    q: "Waves crash,\nSalt and foam kiss the dark shore,\nSilence follows.",
-                    tokens: [
-                        "Waves",
-                        "crash",
-                        ",",
-                        "Salt",
-                        "and",
-                        "foam",
-                        "kiss",
-                        "the",
-                        "dark",
-                        "shore",
-                        ",",
-                        "Silence",
-                        "follows",
-                        ".",
-                    ],
-                },
+                        "gentle",
+                        "patter",
+                        "."
+                    ]
+                }
             ];
 
             // ─── DARK MODE ─────────────────────────────────────────────────
@@ -3661,7 +3595,7 @@
                                 ctx.beginPath();
                                 ctx.moveTo(pts[i].x, pts[i].y);
                                 ctx.lineTo(pts[j].x, pts[j].y);
-                                ctx.strokeStyle = `rgba(99,102,241,${0.12 * (1 - d / 120)})`;
+                                ctx.strokeStyle = `rgba(13,148,136,${0.12 * (1 - d / 120)})`;
                                 ctx.lineWidth = 0.8;
                                 ctx.stroke();
                             }
@@ -3670,7 +3604,7 @@
                     pts.forEach((p) => {
                         ctx.beginPath();
                         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                        ctx.fillStyle = "rgba(99,102,241,.35)";
+                        ctx.fillStyle = "rgba(13,148,136,.35)";
                         ctx.fill();
                         p.x += p.vx;
                         p.y += p.vy;
@@ -3801,7 +3735,7 @@
                 const txt = document.getElementById("tok-detail-text");
                 box.style.display = "block";
                 const details = TOKEN_DETAILS[i] || "token in vocabulary";
-                txt.innerHTML = `<span style="color:${t.color};font-family:'JetBrains Mono',monospace">"${t.text}"</span> → Token ID <span style="color:var(--accent3);font-family:'JetBrains Mono',monospace">${t.id}</span> — ${details}`;
+                txt.innerHTML = `<span style="color:${t.color};font-family:'IBM Plex Mono',monospace">"${t.text}"</span> → Token ID <span style="color:var(--accent3);font-family:'IBM Plex Mono',monospace">${t.id}</span> — ${details}`;
             }
 
             // ─── SECTION 2: EMBEDDINGS ────────────────────────────────────
@@ -3817,7 +3751,7 @@
                         "padding:.9rem;opacity:0;transform:translateY(12px);transition:all .5s";
                     card.style.transitionDelay = ti * 0.1 + "s";
                     const dims = Array.from({ length: 8 }, () => Math.random());
-                    card.innerHTML = `<p style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:${t.color};margin-bottom:.6rem">${t.text}</p>
+                    card.innerHTML = `<p style="font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:${t.color};margin-bottom:.6rem">${t.text}</p>
     <div class="emb-bar-wrap">${dims
         .map(
             (v, di) => `
@@ -3859,32 +3793,32 @@
 
                 // All vocabulary words with fake 2D positions
                 const words = [
-                    { w: "Paris", x: 0.72, y: 0.28, c: "#f59e0b" },
-                    { w: "France", x: 0.68, y: 0.35, c: "#f59e0b" },
-                    { w: "London", x: 0.62, y: 0.22, c: "#f59e0b" },
-                    { w: "capital", x: 0.58, y: 0.32, c: "#06b6d4" },
-                    { w: "city", x: 0.52, y: 0.38, c: "#06b6d4" },
-                    { w: "country", x: 0.55, y: 0.45, c: "#06b6d4" },
-                    { w: "What", x: 0.2, y: 0.25, c: "#6366f1" },
-                    { w: "is", x: 0.15, y: 0.32, c: "#8b5cf6" },
-                    { w: "the", x: 0.18, y: 0.42, c: "#8b5cf6" },
-                    { w: "of", x: 0.12, y: 0.48, c: "#8b5cf6" },
-                    { w: "King", x: 0.82, y: 0.7, c: "#10b981" },
-                    { w: "Queen", x: 0.78, y: 0.75, c: "#10b981" },
-                    { w: "ocean", x: 0.35, y: 0.75, c: "#06b6d4" },
-                    { w: "wave", x: 0.28, y: 0.8, c: "#06b6d4" },
-                    { w: "gravity", x: 0.65, y: 0.72, c: "#f59e0b" },
+                    { w: "stars", x: 0.72, y: 0.28, c: "#e11d48" },
+                    { w: "night", x: 0.68, y: 0.35, c: "#e11d48" },
+                    { w: "moon", x: 0.62, y: 0.22, c: "#e11d48" },
+                    { w: "twinkle", x: 0.58, y: 0.32, c: "#d97706" },
+                    { w: "shine", x: 0.52, y: 0.38, c: "#d97706" },
+                    { w: "glow", x: 0.55, y: 0.45, c: "#d97706" },
+                    { w: "Why", x: 0.2, y: 0.25, c: "#0d9488" },
+                    { w: "is", x: 0.15, y: 0.32, c: "#14b8a6" },
+                    { w: "the", x: 0.18, y: 0.42, c: "#14b8a6" },
+                    { w: "of", x: 0.12, y: 0.48, c: "#14b8a6" },
+                    { w: "King", x: 0.82, y: 0.7, c: "#059669" },
+                    { w: "Queen", x: 0.78, y: 0.75, c: "#059669" },
+                    { w: "rain", x: 0.35, y: 0.75, c: "#d97706" },
+                    { w: "drops", x: 0.28, y: 0.8, c: "#d97706" },
+                    { w: "rainbow", x: 0.65, y: 0.72, c: "#e11d48" },
                 ];
 
                 // Draw connections
                 const close = [
-                    ["Paris", "France"],
-                    ["Paris", "capital"],
-                    ["France", "capital"],
-                    ["What", "is"],
+                    ["stars", "night"],
+                    ["stars", "twinkle"],
+                    ["night", "twinkle"],
+                    ["Why", "do"],
                     ["is", "the"],
                     ["King", "Queen"],
-                    ["ocean", "wave"],
+                    ["rain", "drops"],
                 ];
                 close.forEach(([a, b]) => {
                     const wa = words.find((w) => w.w === a),
@@ -3893,7 +3827,7 @@
                     ctx.beginPath();
                     ctx.moveTo(wa.x * W, wa.y * H);
                     ctx.lineTo(wb.x * W, wb.y * H);
-                    ctx.strokeStyle = "rgba(99,102,241,0.15)";
+                    ctx.strokeStyle = "rgba(13,148,136,0.15)";
                     ctx.lineWidth = 1;
                     ctx.stroke();
                 });
@@ -3908,7 +3842,7 @@
                     ctx.fillStyle = dark
                         ? "rgba(241,245,249,.8)"
                         : "rgba(15,23,42,.7)";
-                    ctx.font = "500 11px 'JetBrains Mono',monospace";
+                    ctx.font = "500 11px 'IBM Plex Mono',monospace";
                     ctx.fillText(w.w, w.x * W + 10, w.y * H + 4);
                 });
 
@@ -3916,7 +3850,7 @@
                 ctx.fillStyle = dark
                     ? "rgba(148,163,184,.6)"
                     : "rgba(71,85,105,.6)";
-                ctx.font = "10px 'JetBrains Mono',monospace";
+                ctx.font = "10px 'IBM Plex Mono',monospace";
                 ctx.fillText(
                     "← Semantically similar tokens cluster together →",
                     W / 2 - 140,
@@ -3935,7 +3869,7 @@
                     document.documentElement.classList.contains("dark");
                 const positions = Array.from({ length: 50 }, (_, i) => i);
                 const freq = [1, 0.5, 0.25, 0.1];
-                const colors = ["#6366f1", "#06b6d4", "#f59e0b", "#10b981"];
+                const colors = ["#0d9488", "#d97706", "#e11d48", "#059669"];
                 const datasets = freq.map((f, i) => ({
                     label: `freq ${f}`,
                     data: positions.map((p) => Math.sin(p * f)),
@@ -3958,7 +3892,7 @@
                                 labels: {
                                     color: dark ? "#94a3b8" : "#475569",
                                     font: {
-                                        family: "JetBrains Mono",
+                                        family: "IBM Plex Mono",
                                         size: 10,
                                     },
                                     boxWidth: 12,
@@ -3977,14 +3911,14 @@
                                 grid: { color: dark ? "#1e1e2e" : "#f1f5f9" },
                                 ticks: {
                                     color: dark ? "#475569" : "#94a3b8",
-                                    font: { family: "JetBrains Mono", size: 9 },
+                                    font: { family: "IBM Plex Mono", size: 9 },
                                 },
                                 title: {
                                     display: true,
                                     text: "Position in sequence",
                                     color: dark ? "#94a3b8" : "#475569",
                                     font: {
-                                        family: "JetBrains Mono",
+                                        family: "IBM Plex Mono",
                                         size: 10,
                                     },
                                 },
@@ -3993,7 +3927,7 @@
                                 grid: { color: dark ? "#1e1e2e" : "#f1f5f9" },
                                 ticks: {
                                     color: dark ? "#475569" : "#94a3b8",
-                                    font: { family: "JetBrains Mono", size: 9 },
+                                    font: { family: "IBM Plex Mono", size: 9 },
                                 },
                                 min: -1,
                                 max: 1,
@@ -4019,19 +3953,19 @@
                 // Header row
                 html += '<tr><td style="width:60px"></td>';
                 toks.forEach((t) => {
-                    html += `<td style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--text3);text-align:center;padding-bottom:.4rem;width:${cellSize}px">${t}</td>`;
+                    html += `<td style="font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--text3);text-align:center;padding-bottom:.4rem;width:${cellSize}px">${t}</td>`;
                 });
                 html += "</tr>";
                 // Data rows
                 for (let i = 0; i < n; i++) {
-                    html += `<tr><td style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--text3);text-align:right;padding-right:.5rem">${toks[i]}</td>`;
+                    html += `<tr><td style="font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--text3);text-align:right;padding-right:.5rem">${toks[i]}</td>`;
                     for (let j = 0; j < n; j++) {
                         const v = Math.min(data[i][j], 1);
                         const alpha = Math.round(v * 255)
                             .toString(16)
                             .padStart(2, "0");
                         const tip = `${toks[i]}→${toks[j]}: ${(v * 100).toFixed(0)}%`;
-                        html += `<td><div class="heat-cell" data-tip="${tip}" style="width:${cellSize}px;height:${cellSize}px;background:#6366f1${alpha};opacity:0;transition:opacity ${0.2 + i * 0.05 + j * 0.05}s ease ${(i * n + j) * 0.02}s"></div></td>`;
+                        html += `<td><div class="heat-cell" data-tip="${tip}" style="width:${cellSize}px;height:${cellSize}px;background:#0d9488${alpha};opacity:0;transition:opacity ${0.2 + i * 0.05 + j * 0.05}s ease ${(i * n + j) * 0.02}s"></div></td>`;
                     }
                     html += "</tr>";
                 }
@@ -4051,11 +3985,11 @@
                     if (!btn) return;
                     const active = i === idx;
                     btn.style.background = active
-                        ? "rgba(99,102,241,.15)"
+                        ? "rgba(13,148,136,.15)"
                         : "var(--bg3)";
                     btn.style.color = active ? "var(--accent)" : "var(--text3)";
                     btn.style.borderColor = active
-                        ? "rgba(99,102,241,.3)"
+                        ? "rgba(13,148,136,.3)"
                         : "var(--border)";
                 });
                 drawAttnHeatmap();
@@ -4067,11 +4001,11 @@
                 if (charts.softmax) charts.softmax.destroy();
                 const dark =
                     document.documentElement.classList.contains("dark");
-                const raw = [3.2, 1.8, 0.9, -0.3, 1.4, 0.2];
+                const raw = [2.8, 1.2, 3.5, 2.1, 1.9, 0.4, 3.1, 0.3];
                 const exp = raw.map((v) => Math.exp(v));
                 const sum = exp.reduce((a, b) => a + b, 0);
                 const soft = exp.map((v) => v / sum);
-                const labels = ["What", "is", "capital", "of", "France", "?"];
+                const labels = ["Why", "do", "stars", "tw", "inkle", "at", "night", "?"];
                 charts.softmax = new Chart(canvas.getContext("2d"), {
                     type: "bar",
                     data: {
@@ -4080,16 +4014,16 @@
                             {
                                 label: "Raw score (logit)",
                                 data: raw,
-                                backgroundColor: "rgba(99,102,241,.5)",
-                                borderColor: "#6366f1",
+                                backgroundColor: "rgba(13,148,136,.5)",
+                                borderColor: "#0d9488",
                                 borderWidth: 1.5,
                                 borderRadius: 4,
                             },
                             {
                                 label: "After softmax (prob)",
                                 data: soft,
-                                backgroundColor: "rgba(16,185,129,.5)",
-                                borderColor: "#10b981",
+                                backgroundColor: "rgba(5,150,105,.5)",
+                                borderColor: "#059669",
                                 borderWidth: 1.5,
                                 borderRadius: 4,
                             },
@@ -4103,7 +4037,7 @@
                                 labels: {
                                     color: dark ? "#94a3b8" : "#475569",
                                     font: {
-                                        family: "JetBrains Mono",
+                                        family: "IBM Plex Mono",
                                         size: 10,
                                     },
                                 },
@@ -4122,7 +4056,7 @@
                                 ticks: {
                                     color: dark ? "#94a3b8" : "#475569",
                                     font: {
-                                        family: "JetBrains Mono",
+                                        family: "IBM Plex Mono",
                                         size: 10,
                                     },
                                 },
@@ -4132,7 +4066,7 @@
                                 ticks: {
                                     color: dark ? "#94a3b8" : "#475569",
                                     font: {
-                                        family: "JetBrains Mono",
+                                        family: "IBM Plex Mono",
                                         size: 10,
                                     },
                                 },
@@ -4169,94 +4103,94 @@
                 const tokenPoints = [
                     // Q0 tokens with semantic positions
                     {
-                        name: "What",
+                        name: "Why",
                         pos: [-3.2, 2.1, 0.5],
-                        color: 0x6366f1,
+                        color: 0x0d9488,
                         cat: 0,
                     },
                     {
-                        name: "is",
+                        name: "do",
                         pos: [-2.8, 1.8, -0.3],
-                        color: 0x8b5cf6,
+                        color: 0x14b8a6,
                         cat: 2,
                     },
                     {
                         name: "the",
                         pos: [-2.5, 1.6, 0.2],
-                        color: 0x8b5cf6,
+                        color: 0x14b8a6,
                         cat: 2,
                     },
                     {
-                        name: "capital",
+                        name: "twinkle",
                         pos: [0.2, 0.4, 1.2],
-                        color: 0x06b6d4,
+                        color: 0xd97706,
                         cat: 1,
                     },
                     {
-                        name: "of",
+                        name: "at",
                         pos: [-0.5, 0.8, -0.4],
-                        color: 0x8b5cf6,
+                        color: 0x14b8a6,
                         cat: 2,
                     },
                     {
-                        name: "France",
+                        name: "night",
                         pos: [2.1, -0.2, 0.8],
-                        color: 0xf59e0b,
+                        color: 0xe11d48,
                         cat: 1,
                     },
                     {
                         name: "?",
                         pos: [3.0, 1.5, -0.5],
-                        color: 0x94a3b8,
+                        color: 0xa8a29e,
                         cat: 2,
                     },
                     // Extra words for richness
                     {
-                        name: "Paris",
+                        name: "stars",
                         pos: [2.4, 0.6, 1.5],
-                        color: 0xf59e0b,
+                        color: 0xe11d48,
                         cat: 1,
                     },
                     {
                         name: "King",
                         pos: [0.8, 2.5, -1.2],
-                        color: 0x10b981,
+                        color: 0x059669,
                         cat: 1,
                     },
                     {
                         name: "Queen",
                         pos: [1.2, 2.1, -0.9],
-                        color: 0x10b981,
+                        color: 0x059669,
                         cat: 1,
                     },
                     {
-                        name: "city",
+                        name: "shine",
                         pos: [0.6, 0.1, 2.1],
-                        color: 0x06b6d4,
+                        color: 0xd97706,
                         cat: 1,
                     },
                     {
-                        name: "nation",
+                        name: "sky",
                         pos: [2.8, -0.8, 0.2],
-                        color: 0xf59e0b,
+                        color: 0xe11d48,
                         cat: 1,
                     },
                     {
                         name: "Why",
                         pos: [-3.5, 1.5, 1.2],
-                        color: 0x6366f1,
+                        color: 0x0d9488,
                         cat: 0,
                     },
                     {
                         name: "How",
                         pos: [-3.0, 2.4, 0.0],
-                        color: 0x6366f1,
+                        color: 0x0d9488,
                         cat: 0,
                     },
                     {
                         name: "Where",
                         pos: [-2.8, 2.8, -0.8],
-                        color: 0x6366f1,
+                        color: 0x0d9488,
                         cat: 0,
                     },
                 ];
@@ -4279,7 +4213,7 @@
 
                 // Connections between close tokens
                 const lineMat = new THREE.LineBasicMaterial({
-                    color: 0x6366f1,
+                    color: 0x0d9488,
                     transparent: true,
                     opacity: 0.2,
                 });
@@ -4305,7 +4239,7 @@
                 const dirL = new THREE.DirectionalLight(0xffffff, 0.8);
                 dirL.position.set(5, 5, 5);
                 scene.add(dirL);
-                const ptL = new THREE.PointLight(0x6366f1, 1, 20);
+                const ptL = new THREE.PointLight(0x0d9488, 1, 20);
                 ptL.position.set(-3, 3, 3);
                 scene.add(ptL);
 
@@ -4452,11 +4386,11 @@
                 const sum = exp.reduce((a, b) => a + b, 0);
                 const probs = exp.map((v) => v / sum);
                 const colors = [
-                    "#6366f1",
-                    "#8b5cf6",
-                    "#06b6d4",
-                    "#10b981",
-                    "#f59e0b",
+                    "#0d9488",
+                    "#14b8a6",
+                    "#d97706",
+                    "#059669",
+                    "#e11d48",
                     "#ef4444",
                     "#ec4899",
                     "#0ea5e9",
@@ -4477,7 +4411,7 @@
           <span class="prob-val">${probPct}%</span>
         </div>
       </div>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--text3);width:48px;text-align:right">${raw[i].toFixed(1)}</span>`;
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--text3);width:48px;text-align:right">${raw[i].toFixed(1)}</span>`;
                     container.appendChild(div);
                     setTimeout(
                         () => {
@@ -4513,8 +4447,8 @@
                             {
                                 label: "Raw Logit",
                                 data: raw,
-                                backgroundColor: "rgba(99,102,241,.5)",
-                                borderColor: "#6366f1",
+                                backgroundColor: "rgba(13,148,136,.5)",
+                                borderColor: "#0d9488",
                                 borderWidth: 1.5,
                                 borderRadius: 4,
                                 order: 1,
@@ -4522,8 +4456,8 @@
                             {
                                 label: "Softmax Prob",
                                 data: probs,
-                                backgroundColor: "rgba(16,185,129,.45)",
-                                borderColor: "#10b981",
+                                backgroundColor: "rgba(5,150,105,.45)",
+                                borderColor: "#059669",
                                 borderWidth: 1.5,
                                 borderRadius: 4,
                                 order: 2,
@@ -4539,7 +4473,7 @@
                                 labels: {
                                     color: dark ? "#94a3b8" : "#475569",
                                     font: {
-                                        family: "JetBrains Mono",
+                                        family: "IBM Plex Mono",
                                         size: 10,
                                     },
                                 },
@@ -4557,14 +4491,14 @@
                                 grid: { color: dark ? "#1e1e2e" : "#f1f5f9" },
                                 ticks: {
                                     color: dark ? "#94a3b8" : "#475569",
-                                    font: { family: "JetBrains Mono", size: 9 },
+                                    font: { family: "IBM Plex Mono", size: 9 },
                                 },
                             },
                             y: {
                                 grid: { color: dark ? "#1e1e2e" : "#f1f5f9" },
                                 ticks: {
                                     color: dark ? "#94a3b8" : "#475569",
-                                    font: { family: "JetBrains Mono", size: 9 },
+                                    font: { family: "IBM Plex Mono", size: 9 },
                                 },
                                 title: {
                                     display: true,
@@ -4576,13 +4510,13 @@
                                 position: "right",
                                 grid: { display: false },
                                 ticks: {
-                                    color: dark ? "#10b981" : "#059669",
-                                    font: { family: "JetBrains Mono", size: 9 },
+                                    color: dark ? "#059669" : "#059669",
+                                    font: { family: "IBM Plex Mono", size: 9 },
                                 },
                                 title: {
                                     display: true,
                                     text: "Probability",
-                                    color: "#10b981",
+                                    color: "#059669",
                                 },
                             },
                         },
@@ -4643,12 +4577,12 @@
                                     data: probs,
                                     backgroundColor: probs.map((p) =>
                                         p >= nucleusCutoff
-                                            ? "rgba(99,102,241,.7)"
+                                            ? "rgba(13,148,136,.7)"
                                             : "rgba(148,163,184,.25)",
                                     ),
                                     borderColor: probs.map((p) =>
                                         p >= nucleusCutoff
-                                            ? "#6366f1"
+                                            ? "#0d9488"
                                             : "rgba(148,163,184,.4)",
                                     ),
                                     borderWidth: 1.5,
@@ -4667,13 +4601,13 @@
                                             type: "line",
                                             yMin: nucleusCutoff,
                                             yMax: nucleusCutoff,
-                                            borderColor: "#f59e0b",
+                                            borderColor: "#e11d48",
                                             borderWidth: 1.5,
                                             borderDash: [4, 3],
                                             label: {
                                                 content: "Top-P cutoff",
                                                 display: true,
-                                                color: "#f59e0b",
+                                                color: "#e11d48",
                                                 font: { size: 10 },
                                             },
                                         },
@@ -4699,7 +4633,7 @@
                                     ticks: {
                                         color: dark ? "#94a3b8" : "#475569",
                                         font: {
-                                            family: "JetBrains Mono",
+                                            family: "IBM Plex Mono",
                                             size: 9,
                                         },
                                     },
@@ -4711,7 +4645,7 @@
                                     ticks: {
                                         color: dark ? "#94a3b8" : "#475569",
                                         font: {
-                                            family: "JetBrains Mono",
+                                            family: "IBM Plex Mono",
                                             size: 9,
                                         },
                                     },
@@ -4721,7 +4655,7 @@
                                         text: "Probability",
                                         color: dark ? "#94a3b8" : "#475569",
                                         font: {
-                                            family: "JetBrains Mono",
+                                            family: "IBM Plex Mono",
                                             size: 9,
                                         },
                                     },
@@ -4778,19 +4712,19 @@
                 outEl.innerHTML = '<span class="cursor"></span>';
                 tokEl.innerHTML = "";
                 const colors = [
-                    "#6366f1",
-                    "#8b5cf6",
-                    "#06b6d4",
-                    "#10b981",
-                    "#f59e0b",
+                    "#0d9488",
+                    "#14b8a6",
+                    "#d97706",
+                    "#059669",
+                    "#e11d48",
                     "#ef4444",
                     "#ec4899",
                     "#0ea5e9",
-                    "#6366f1",
-                    "#8b5cf6",
-                    "#06b6d4",
-                    "#10b981",
-                    "#f59e0b",
+                    "#0d9488",
+                    "#14b8a6",
+                    "#d97706",
+                    "#059669",
+                    "#e11d48",
                     "#ef4444",
                 ];
                 let i = 0;
@@ -4810,7 +4744,7 @@
                     // Add chip
                     const chip = document.createElement("span");
                     chip.textContent = tok;
-                    chip.style.cssText = `display:inline-block;padding:.2rem .55rem;border-radius:5px;background:${col}18;border:1px solid ${col}40;color:${col};font-family:'JetBrains Mono',monospace;font-size:.72rem;animation:genToken .2s ease forwards;margin:.15rem`;
+                    chip.style.cssText = `display:inline-block;padding:.2rem .55rem;border-radius:5px;background:${col}18;border:1px solid ${col}40;color:${col};font-family:'IBM Plex Mono',monospace;font-size:.72rem;animation:genToken .2s ease forwards;margin:.15rem`;
                     tokEl.appendChild(chip);
                     i++;
                     genTimer = setTimeout(addToken, 180 + Math.random() * 120);
