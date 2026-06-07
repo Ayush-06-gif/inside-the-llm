@@ -3,7 +3,7 @@
 An interactive, scroll-driven explainer that visualises every step of how a Large Language Model processes a question and generates an answer. Built for curious minds — no PhD required.
 
 ## 🌐 Live Demo
-[inside-the-llm.netlify.app](https://inside-the-llm.netlify.app)
+[inside-the-llm.netlify.app](https://inside-llm.netlify.app/)
 
 ## 📖 What It Covers
 
