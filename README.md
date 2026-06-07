@@ -3,7 +3,7 @@
 An interactive, scroll-driven explainer that visualises every step of how a Large Language Model processes a question and generates an answer. Built for curious minds — no PhD required.
 
 ## 🌐 Live Demo
-[inside-the-llm.netlify.app](https://inside-the-llm.netlify.app) <!-- replace with your actual URL -->
+[inside-the-llm.netlify.app](https://inside-the-llm.netlify.app)
 
 ## 📖 What It Covers
 
@@ -25,8 +25,11 @@ An interactive, scroll-driven explainer that visualises every step of how a Larg
 - **Interactive temperature slider** — see how output changes from deterministic to chaotic in real time
 - **3D vector space** — drag and rotate token embeddings rendered in WebGL
 - **Attention heatmap** — switch between attention heads and hover cells to inspect scores
-- **3 sample questions** — trace any of the three questions through the entire pipeline
-- **Dark mode** — enabled by default, toggleable
+- **3 sample questions** — trace any of these questions through the entire pipeline:
+  - *"Why do stars twinkle?"*
+  - *"How does a rainbow form?"*
+  - *"Describe the sound of rain."*
+- **Beautiful Dark Mode** — features a modern, deep bluish-violet theme by default
 - **Fully responsive** — works on mobile and desktop
 
 ## 🛠 Tech Stack
@@ -36,14 +39,14 @@ An interactive, scroll-driven explainer that visualises every step of how a Larg
 - [Chart.js](https://www.chartjs.org) — bar, line, and scatter charts
 - [Three.js](https://threejs.org) — 3D token vector space
 - [GSAP + ScrollTrigger](https://greensock.com/gsap) — scroll animations
-- [Google Fonts](https://fonts.google.com) — DM Serif Display, JetBrains Mono, Outfit
+- [Google Fonts](https://fonts.google.com) — Playfair Display, IBM Plex Mono, Inter
 
 ## 🚀 Getting Started
 
 No installation needed. Just open the file in a browser:
 
 ```bash
-git clone https://github.com/shashank-iter/inside-the-llm
+git clone https://github.com/Ayush-06-gif/inside-the-llm.git
 cd inside-the-llm
 open index.html
 ```
